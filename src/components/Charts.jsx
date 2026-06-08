@@ -1,7 +1,7 @@
 
 const PALETTE = ['#2563eb', '#16a34a', '#d97706', '#dc2626', '#7c3aed', '#0891b2', '#db2777'];
 
-// Vertical bar chart. data: [{ label, value }]
+
 export function BarChart({ data, height = 220, format = (v) => v }) {
   const w = 480;
   const h = height;
@@ -46,7 +46,7 @@ export function BarChart({ data, height = 220, format = (v) => v }) {
   );
 }
 
-// Smooth-ish line chart. data: [{ label, value }]
+
 export function LineChart({ data, height = 220, format = (v) => v, color = '#2563eb' }) {
   const w = 480;
   const h = height;
@@ -85,7 +85,7 @@ export function LineChart({ data, height = 220, format = (v) => v, color = '#256
   );
 }
 
-// Donut chart with legend. data: [{ label, value }]
+
 export function DonutChart({ data, size = 200 }) {
   const total = data.reduce((s, d) => s + d.value, 0) || 1;
   const r = 70;

@@ -1,5 +1,4 @@
-// Generic responsive table. Horizontal scroll on small screens via .table-wrap.
-// columns: [{ key, header, render? }]
+
 export default function DataTable({ columns, rows, empty = 'No data.' }) {
   if (!rows || rows.length === 0) {
     return <p className="muted">{empty}</p>;
