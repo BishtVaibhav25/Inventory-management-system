@@ -1,0 +1,12 @@
+package com.ims.salesorder;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface SalesOrderRepository extends JpaRepository<SalesOrder, Long> {
+
+    long countByStatus(SalesOrderStatus status);
+
+    List<SalesOrder> findByCustomerIdOrderByOrderDateDesc(Long customerId);
+}
